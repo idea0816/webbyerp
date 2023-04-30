@@ -1,0 +1,15 @@
+
+/*  /index.html  200
+
+; 放上一個測試用的 React 小專案到 Netlify，在 local 執行正常，在網頁上點選連結也正常，但如果把連結記下來傳給別人或直接重新整理頁面都會變在 404
+; 建立專案使用的是大家都在用的 Create React App，Router 用的是大家都在用的 React Router，好像不應該有問題才對
+; 查了一下，React Router 分為 BrowserRouter 和 HashRouter 兩種，這篇文章不再說明兩者之間的不同，可以參考 這個討論串
+; 兩者呈現的差別在 HashRouter 在 URL 上多了一個「#」，原來使用的是 BrowserRouter
+; 解決方法一​
+; 將 BrowserRouter 換成 HashRouter 問題就解決了，但是 URL 變的比較醜，多了個「#」，像是內部使用的網站，做為公開網站的話看起來就有點不順眼
+; 解決方法二​
+; 參考 Create React App 的 Deploy 說明：說明連結
+; 在 public 目錄下新增一個檔案 _redirects, 檔案只需要有一行就可以
+; /*  /index.html  200
+; 重新 build 專案 deploy 到 Netlify 後，原來會 404 的問題解決
+

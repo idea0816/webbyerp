@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+// scss的檔案可以在前面加上底線後、用import引入、這樣就不會一堆css的檔案了
